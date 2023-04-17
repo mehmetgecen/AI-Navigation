@@ -43,15 +43,19 @@ public class PathMarker
 }
 public class FindPathAStar : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Maze maze;
+    public Material openMaterial;
+    public Material closedMaterial;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject start;
+    public GameObject end;
+    public GameObject pathPoint;
+
+    private List<PathMarker> closedList = new List<PathMarker>();
+    private List<PathMarker> openList = new List<PathMarker>();
+
+    private PathMarker goalNode;
+    private PathMarker startNode;
+    
+    
 }
